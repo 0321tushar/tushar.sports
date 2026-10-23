@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10120f">
+  <meta name="description" content="Big moments, bold opinions, and the sports stories that bring us closer to the action.">
+  <title>Sports — The game, in focus</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/app.js" defer></script>
+</head>
+<body>
+  <div class="announcement">
+    <div class="container announcement-inner">
+      <p><span class="announcement-dot" aria-hidden="true"></span>The home of every game</p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Sports home">SPORT<span>S</span><i>.</i></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-navigation" aria-label="Main navigation">
+        <a class="nav-link is-current" href="#home">Home</a>
+        <a class="nav-link" href="#stories">Stories</a>
+        <a class="nav-link" href="#scores">Scores</a>
+        <a class="nav-link" href="#scores">Matches</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" id="home" aria-labelledby="hero-title">
+      <div class="hero-photo is-visible" aria-hidden="true"></div>
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="hero-sport-picker" role="group" aria-label="Choose the featured sports photo">
+        <span>Featured sport</span>
+        <button type="button" data-hero-sport="football" aria-pressed="true">Football</button>
+        <button type="button" data-hero-sport="basketball" aria-pressed="false">Basketball</button>
+        <button type="button" data-hero-sport="tennis" aria-pressed="false">Tennis</button>
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>The weekend edition <span class="eyebrow-date">Vol. 08 — 2026</span></p>
+        <h1 id="hero-title">The game<br>never <span>stops.</span></h1>
+        <p class="hero-copy">Big moments. Bold opinions. The stories that bring us all a little closer to the action.</p>
+        <a class="button button-lime" href="#stories">Get in the game <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-caption"><span id="hero-slide-count">01 / 03</span><span class="caption-rule" aria-hidden="true"></span><span id="hero-slide-label">Football · All the action, all in one place</span></div>
+    </section>
+
+    <section class="scores-section" id="scores" aria-labelledby="scores-title">
+      <div class="match-visual">
+        <img src="/assets/football-match-action.jpg" alt="">
+        <a class="match-photo-credit" href="https://commons.wikimedia.org/wiki/File:Alg%C3%A9rie_-_Arm%C3%A9nie_-_20140531_-_Yacine_Brahimi_(Alg)_face_%C3%A0_Taron_Voskanyan_(Arm).jpg" target="_blank" rel="noopener noreferrer">
+          Photo: Clément Bucco-Lechat / Wikimedia Commons · CC BY-SA 4.0
+        </a>
+      </div>
+      <div class="container">
+        <div class="scores-heading">
+          <div>
+            <p class="section-kicker">Across every sport</p>
+            <h2 id="scores-title">Find your match<span class="lime-period">.</span></h2>
+            <p class="match-intro">Browse the first 9 matchups, or show more to explore the full schedule.</p>
+          </div>
+          <div class="scores-controls">
+            <span class="scores-date">Match centre · Fixtures</span>
+            <button class="score-arrow" type="button" data-score-direction="-1" aria-label="Scroll fixtures left">←</button>
+            <button class="score-arrow" type="button" data-score-direction="1" aria-label="Scroll fixtures right">→</button>
+          </div>
+        </div>
+        <div class="match-finder">
+          <div class="match-filters" role="group" aria-label="Filter matches by sport">
+            <button class="filter-button is-active" type="button" data-match-filter="all" aria-pressed="true">All sports</button>
+            <button class="filter-button" type="button" data-match-filter="football" aria-pressed="false">Football</button>
+            <button class="filter-button" type="button" data-match-filter="basketball" aria-pressed="false">Basketball</button>
+            <button class="filter-button" type="button" data-match-filter="tennis" aria-pressed="false">Tennis</button>
+          </div>
+          <label class="match-search">
+            <span class="visually-hidden">Search teams or competitions</span>
+            <span aria-hidden="true">⌕</span>
+            <input id="match-search" type="search" placeholder="Search teams or competitions" autocomplete="off">
+          </label>
+        </div>
+        <p class="match-count" id="match-count" aria-live="polite"></p>
+        <div class="score-track" id="fixture-list" aria-label="Upcoming fixtures"></div>
+        <p class="match-empty" id="match-empty" hidden>No matches found. Try a different sport or search.</p>
+        <div class="news-more-wrap">
+          <button class="button button-outline match-more-button" id="match-more" type="button" hidden>Show more matches</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="stories-section container" id="stories" aria-labelledby="stories-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">Straight from the sideline</p>
+          <h2 id="stories-title">Stories that <span>move you.</span></h2>
+        </div>
+        <div class="story-filters" role="group" aria-label="Filter stories by sport">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All sports</button>
+          <button class="filter-button" type="button" data-filter="football" aria-pressed="false">Football</button>
+          <button class="filter-button" type="button" data-filter="basketball" aria-pressed="false">Basketball</button>
+          <button class="filter-button" type="button" data-filter="tennis" aria-pressed="false">Tennis</button>
+          <button class="filter-button" type="button" data-filter="other" aria-pressed="false">Other sports</button>
+          <label class="news-sport-picker">
+            <span class="visually-hidden">Choose a specific sport</span>
+            <select id="news-sport-filter" aria-label="Choose a specific sport">
+              <option value="all">Every sport</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="story-grid">
+        <article class="story-card story-feature" data-sport="football" data-news-card>
+          <a class="story-image image-feature" href="#scores" aria-label="Read the latest football story">
+            <span class="image-tag">The big read</span><span class="image-arrow" aria-hidden="true">↗</span>
+            <span class="image-art image-art-ball" aria-hidden="true"></span>
+          </a>
+          <div class="story-copy">
+            <p class="story-meta">Football <span>·</span> 6 min read</p>
+            <h3><a href="#scores">The beautiful game belongs to everyone</a></h3>
+            <p>From local pitches to the brightest lights, the next generation is changing what the game can be.</p>
+            <a class="text-link" href="#scores">Read the story <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="story-card" data-sport="basketball" data-news-card>
+          <a class="story-image image-basketball" href="#scores" aria-label="Read the latest basketball story">
+            <span class="image-tag">Courtside</span><span class="image-arrow" aria-hidden="true">↗</span>
+            <span class="image-art image-art-hoop" aria-hidden="true"></span>
+          </a>
+          <div class="story-copy">
+            <p class="story-meta">Basketball <span>·</span> 4 min read</p>
+            <h3><a href="#scores">A new era is taking shape on the court</a></h3>
+            <p>Meet the players rewriting the playbook, one possession at a time.</p>
+            <a class="text-link" href="#scores">Read the story <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="story-card" data-sport="tennis" data-news-card>
+          <a class="story-image image-tennis" href="#scores" aria-label="Read the latest tennis story">
+            <span class="image-tag">On the line</span><span class="image-arrow" aria-hidden="true">↗</span>
+            <span class="image-art image-art-court" aria-hidden="true"></span>
+          </a>
+          <div class="story-copy">
+            <p class="story-meta">Tennis <span>·</span> 5 min read</p>
+            <h3><a href="#scores">The long road back to centre court</a></h3>
+            <p>Inside the resilience, the routines and the work behind every comeback.</p>
+            <a class="text-link" href="#scores">Read the story <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="news-more-wrap">
+        <p class="news-status" id="news-status" aria-live="polite"></p>
+        <button class="button button-outline news-more-button" id="news-more" type="button" hidden>Show more stories</button>
+      </div>
+    </section>
+
+    <div class="trending-shopping container">
+      <section class="trending-section" id="trending" aria-labelledby="trending-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Your sports control room</p>
+            <h2 id="trending-title">For you right now<span class="lime-period">.</span></h2>
+          </div>
+        </div>
+        <div class="trending-grid" id="trending-games" aria-live="polite"></div>
+        <details class="favorite-picker">
+          <summary>Choose your favorite teams</summary>
+          <label class="visually-hidden" for="favorite-team-search">Search teams</label>
+          <input class="favorite-team-search" id="favorite-team-search" type="search" placeholder="Search teams">
+          <p class="favorite-team-hint" id="favorite-team-hint"></p>
+          <div class="favorite-team-options" id="favorite-team-options"></div>
+        </details>
+        <p class="trending-status" id="trending-status">Loading trending scores…</p>
+      </section>
+      <aside class="sportswear-section" aria-labelledby="sportswear-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Gear up for game day</p>
+            <h2 id="sportswear-title">Shop sportswear<span class="lime-period">.</span></h2>
+          </div>
+        </div>
+        <nav class="sportswear-links" aria-label="Shop sportswear categories">
+          <a class="sportswear-jersey-card" href="https://www.amazon.com/s?k=football+jerseys" aria-label="Shop football jerseys on Amazon">
+            <span class="sportswear-icon jersey-icon" aria-hidden="true">F</span>
+            <span><strong>Football jerseys</strong><small>Match-day essentials</small></span>
+            <span class="sportswear-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="sportswear-training-card" href="https://www.amazon.com/s?k=training+and+gym+wear" aria-label="Shop training and gym wear on Amazon">
+            <span class="sportswear-icon training-icon" aria-hidden="true">T</span>
+            <span><strong>Training wear</strong><small>Ready for every session</small></span>
+            <span class="sportswear-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="sportswear-running-card" href="https://www.amazon.com/s?k=running+shoes" aria-label="Shop running shoes on Amazon">
+            <span class="sportswear-icon shoes-icon" aria-hidden="true">R</span>
+            <span><strong>Running shoes</strong><small>Find your next stride</small></span>
+            <span class="sportswear-arrow" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+        <p class="sportswear-intro">Find your next kit, training fit, or pair of game-ready shoes.</p>
+      </aside>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#home" aria-label="Sports home">SPORT<span>S</span><i>.</i></a>
+      <p>For the love of the game.<br>And everything around it.</p>
+      <a class="footer-top" href="#home">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="container footer-links">
+      <nav class="footer-nav" aria-label="About Sports">
+        <button type="button" data-footer-info="privacy">Privacy Policy</button>
+        <button type="button" data-footer-info="about">About Us</button>
+        <button type="button" data-footer-info="support">Support Us</button>
+        <button type="button" data-footer-info="careers">Careers</button>
+      </nav>
+      <nav class="social-links" aria-label="Social media">
+        <a href="https://www.facebook.com/" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.2v3.2H10V21h3.4Z"/></svg>
+        </a>
+        <a href="https://x.com/" aria-label="X, formerly Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.3-8.4L1.8 2h6.5l4.5 6.7L18.9 2Zm-1.1 17.9h1.7L7.3 4H5.5l12.3 15.9Z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.7" r="1.2"/></svg>
+        </a>
+        <a href="https://www.youtube.com/" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 3a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4ZM3.3 9h3.8v12H3.3V9Zm6.2 0h3.6v1.6h.1A4 4 0 0 1 16.8 8c4 0 4.7 2.6 4.7 5.9V21h-3.8v-6.3c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9.5V9Z"/></svg>
+        </a>
+      </nav>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Sports</span><span>Play it your way.</span></div>
+  </footer>
+  <dialog class="footer-dialog" id="footer-dialog" aria-labelledby="footer-dialog-title">
+    <div class="footer-dialog-content">
+      <button class="footer-dialog-close" type="button" aria-label="Close dialog">×</button>
+      <p class="section-kicker">Sports</p>
+      <h2 id="footer-dialog-title"></h2>
+      <p id="footer-dialog-copy"></p>
+    </div>
+  </dialog>
+</body>
+</html>

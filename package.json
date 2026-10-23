@@ -1,0 +1,9 @@
+{
+  "name": "sports-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A lightweight sports homepage with a small Node.js fixtures API",
+  "scripts": {
+    "start": "node src/server.js"
+  }
+}

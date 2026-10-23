@@ -1,0 +1,135 @@
+.sportswear-section {
+  display: flex;
+  flex-direction: column;
+  container-type: inline-size;
+  min-width: 0;
+  padding: 0;
+}
+
+.sportswear-section h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -.06em;
+  line-height: 1;
+}
+
+.sportswear-intro {
+  margin: .8rem 0 0;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 2.8cqi, 1.1rem);
+}
+
+.sportswear-links {
+  display: grid;
+  flex: 1;
+  grid-template-rows: repeat(3, minmax(100px, 1fr));
+  gap: .8rem;
+}
+
+.sportswear-links a {
+  display: grid;
+  grid-template-columns: clamp(52px, 13cqi, 64px) minmax(0, 1fr) auto;
+  min-height: 100px;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: rgb(16 18 15 / 55%);
+  transition: border-color .2s ease, background .2s ease;
+}
+
+.sportswear-links .sportswear-jersey-card {
+  background-color: var(--bg-card);
+  background-image:
+    linear-gradient(90deg, rgb(16 18 15 / 94%) 0%, rgb(16 18 15 / 83%) 56%, rgb(16 18 15 / 45%) 100%),
+    url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1200&q=80");
+  background-position: center, center 42%;
+  background-size: cover;
+}
+
+.sportswear-links .sportswear-training-card {
+  background-color: var(--bg-card);
+  background-image:
+    linear-gradient(90deg, rgb(16 18 15 / 94%) 0%, rgb(16 18 15 / 83%) 56%, rgb(16 18 15 / 45%) 100%),
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80");
+  background-position: center, center 48%;
+  background-size: cover;
+}
+
+.sportswear-links .sportswear-running-card {
+  background-color: var(--bg-card);
+  background-image:
+    linear-gradient(90deg, rgb(16 18 15 / 94%) 0%, rgb(16 18 15 / 83%) 56%, rgb(16 18 15 / 45%) 100%),
+    url("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1200&q=80");
+  background-position: center, center 48%;
+  background-size: cover;
+}
+
+.sportswear-links a:hover {
+  border-color: var(--accent-lime);
+  background-color: var(--bg-card-hover);
+}
+
+.sportswear-links .sportswear-jersey-card:hover {
+  background-image:
+    linear-gradient(90deg, rgb(16 18 15 / 90%) 0%, rgb(16 18 15 / 76%) 56%, rgb(16 18 15 / 35%) 100%),
+    url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1200&q=80");
+}
+
+.sportswear-links .sportswear-training-card:hover {
+  background-image:
+    linear-gradient(90deg, rgb(16 18 15 / 90%) 0%, rgb(16 18 15 / 76%) 56%, rgb(16 18 15 / 35%) 100%),
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80");
+}
+
+.sportswear-links .sportswear-running-card:hover {
+  background-image:
+    linear-gradient(90deg, rgb(16 18 15 / 90%) 0%, rgb(16 18 15 / 76%) 56%, rgb(16 18 15 / 35%) 100%),
+    url("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1200&q=80");
+}
+
+.sportswear-icon {
+  display: grid;
+  width: clamp(52px, 13cqi, 64px);
+  height: clamp(52px, 13cqi, 64px);
+  place-items: center;
+  border-radius: 4px;
+  color: var(--text-main);
+  font-size: clamp(1rem, 3cqi, 1.1rem);
+  font-weight: 900;
+}
+
+.jersey-icon {
+  background: linear-gradient(145deg, #692b31, #a3444c);
+}
+
+.training-icon {
+  background: linear-gradient(145deg, #235b40, #399263);
+}
+
+.shoes-icon {
+  background: linear-gradient(145deg, #263b6b, #4569b2);
+}
+
+.sportswear-links strong,
+.sportswear-links small {
+  display: block;
+}
+
+.sportswear-links strong {
+  font-size: clamp(1.2rem, 4cqi, 1.4rem);
+}
+
+.sportswear-links small {
+  margin-top: .3rem;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 3.2cqi, 1.1rem);
+}
+
+.sportswear-arrow {
+  color: var(--accent-lime);
+  font-size: clamp(1rem, 2.8cqi, 1.1rem);
+}
+
